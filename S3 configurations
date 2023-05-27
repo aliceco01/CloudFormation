@@ -1,0 +1,20 @@
+Version: 
+
+MyBucket:
+Type: AWS::S3::Bucket
+Properties: 
+
+
+
+MyBucketPolicy:
+Type: AWS::S3::BucketPolicy
+Properties:
+Bucket: !Ref MyBucket 
+PolicyDocument:
+  Version: "2012-10-17"
+  Statment:
+  - Effect: Allow
+    Principle:
+    Service: s3.amazonaws.com
+   Action: 
+   (## add in list of actions)
